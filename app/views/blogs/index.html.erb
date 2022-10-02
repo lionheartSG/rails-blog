@@ -1,0 +1,20 @@
+<div class="container mt-5">
+  <div id="posts">
+    <h1>All my blogs here</h1>
+    <br>
+    <% @blogs.each do |blog| %>
+    <h2><%= blog.title %><%= link_to edit_blog_path(blog) do %>
+      <i class="fa-solid fa-pen-to-square"></i>
+    <% end %>
+    <%= link_to blog_path(blog),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+    <i class="fa-solid fa-trash"></i>
+    <% end %>
+    </h2>
+
+
+
+    <p><%= blog.content %></p>
+    <% end %>
+  </div>
+</div>

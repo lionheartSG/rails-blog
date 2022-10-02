@@ -34,6 +34,11 @@
     <div class="col-1"></div>
     <div id="blog" class="col-8 border mb-5">
       <h3>My blog articles</h3>
+      <div class="cards">
+      <% @blogs.each do |blog| %>
+        <div class="card"><%=blog.title%></div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

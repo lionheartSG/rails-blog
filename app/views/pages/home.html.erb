@@ -36,7 +36,9 @@
       <h3>My blog articles</h3>
       <div class="cards">
       <% @blogs.each do |blog| %>
+        <%= link_to blog_path(blog), data: { turbo_frame: 'modal'} do %>
         <div class="card"><%=blog.title%></div>
+        <% end %>
         <% end %>
       </div>
     </div>
@@ -49,5 +51,5 @@
       <li><i class="fa-brands fa-github"></i></li>
       <li><i class="fa-solid fa-envelope"></i></li>
     </ul>
-    <p>Made with Ruby on Rails and Stimulus</p>
+    <p>Made purely on Ruby on Rails, Bootstrap, and Stimulus</p>
   </div>

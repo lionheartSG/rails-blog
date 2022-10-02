@@ -1,0 +1,11 @@
+<%= turbo_frame_tag "modal" do %>
+        <%# controller: 'modal', action: 'click->modal#open', modal_target: 'link',  %>
+  <div id="post" class="modal" data-controller="modal" data-action="click->modal#close" data-modal-target="modal">
+    <div class="modal-content">
+      <span class="close d-flex align-self-end" data-modal-target="close">&times;</span>
+      <h1><%= @blog.title %></h1>
+      <p><%=@blog.content%></p>
+    </div>
+  </div>
+
+<% end %>

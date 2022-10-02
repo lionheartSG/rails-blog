@@ -36,6 +36,9 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 16px;
+    a {
+      text-decoration: none;
+    }
   }
 
   .card {
@@ -47,6 +50,7 @@ body {
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
     justify-content: center;
     align-items: center;
+    text-decoration: none;
   }
 
   @media(max-width: 1400px) {

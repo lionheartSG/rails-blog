@@ -11,7 +11,8 @@ body {
   }
 
   p {
-    color: $rafi-orange
+    color: $rafi-orange;
+    text-align: justify;
   }
 
   border-radius: 15px;
@@ -32,5 +33,29 @@ body {
   p {
     font-size: 36px;
     margin-right: 24px;
+  }
+}
+
+.footer {
+  background-color: $rafi-black;
+  height: 150px;
+
+  ul {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  li {
+    display: inline;
+    text-decoration: none;
+    font-size: 36px;
+    text-align: center;
+    color: $rafi-orange;
+    margin: 20px;
+  }
+
+  p {
+    color: $rafi-orange;
+    margin-top: 10px;
   }
 }

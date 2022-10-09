@@ -2,12 +2,11 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="modal"
 export default class extends Controller {
-  static targets = ["link", "modal"]
+  static targets = ["modal"]
   connect() {
   }
 
-  close(e){
-    e.preventDefault()
+  close(){
     const modal = this.modalTarget
     modal.style.display = "none"
   }

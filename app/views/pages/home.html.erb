@@ -32,18 +32,24 @@
       </div>
     </div>
     <div class="col-1"></div>
-    <div id="blog" class="col-8 border mb-5">
-      <h3>My blog articles</h3>
+
+    <div id="blog" class="col-8 border">
+      <h3>This is my blog</h3>
       <div class="cards">
       <% @blogs.each do |blog| %>
         <%= link_to blog_path(blog), data: { turbo_frame: 'modal'} do %>
-        <div class="card"><%=blog.title%></div>
+        <div class="card">
+          <%=blog.title%>
+        </div>
         <% end %>
         <% end %>
       </div>
     </div>
+
   </div>
 </div>
+
+
   <div class="footer w-100 d-flex justify-content-center align-items-center flex-column">
     <ul>
       <li><i class="fa-brands fa-facebook"></i></li>

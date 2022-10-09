@@ -1,8 +1,15 @@
 // Specific CSS for your home-page
 body {
-  background: #0f0c29; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #ADA996;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container {
+  background-color: $rafi-grey;
+  padding: 40px;
+  margin-bottom: 40px;
+  border-radius: 20px;
 }
 
 .session {
@@ -12,7 +19,7 @@ body {
 
 #about-me {
   h3 {
-    color: $rafi-grey;
+    color: $rafi-black;
   }
 
   p {
@@ -25,17 +32,22 @@ body {
 }
 
 #blog {
-  h3 {
-    color: $rafi-grey;
-  }
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-radius: 15px;
   padding: 20px;
 
+  h3 {
+    color: $rafi-black;
+    padding: 40px;
+  }
+
   .cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 24px;
+    height: 200px !important;
     a {
       text-decoration: none;
     }
@@ -53,13 +65,13 @@ body {
     text-decoration: none;
   }
 
-  @media(max-width: 1400px) {
+  @media(max-width: 1200px) {
     .cards {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
 
-  @media(max-width: 992px) {
+  @media(max-width: 1199px) {
     .cards {
       grid-template-columns: 1fr 1fr;
     }
@@ -74,6 +86,18 @@ body {
     }
     .card {
       width: 300px;
+    }
+  }
+
+  @media(max-width: 415px) {
+    .cards {
+      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .card {
+      width: 150px;
     }
   }
 

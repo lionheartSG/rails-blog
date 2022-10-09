@@ -1,9 +1,9 @@
-<div class='container'>
+<div id= "blog-new" class='container'>
 <br>
 <br>
 <%= simple_form_for(@blog) do |f| %>
   <%= f.input :title %>
-  <%= f.input :content %>
+  <%= f.rich_text_area :rich_content %>
   <%= f.submit %>
 <% end %>
 </div>

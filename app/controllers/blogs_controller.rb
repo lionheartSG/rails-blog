@@ -16,8 +16,8 @@ class BlogsController < ApplicationController
   def create
     @blog = Blog.new(blog_params)
     @blog.save
-    if @blog.save == true
-      redirect_to blogs_path(@blog)
+    if @blog.save
+      redirect_to blogs_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -28,12 +28,12 @@ class BlogsController < ApplicationController
 
   def update
     @blog.update(blog_params)
-    redirect_to blogs_path(@blog)
+    redirect_to blogs_path, notice: 'Blog was successfully updated.'
   end
 
   def destroy
     @blog.destroy
-    redirect_to blogs_path, status: :see_other
+    redirect_to blogs_path, status: :see_other, notice: 'Blog was successfully deleted.'
   end
 end
 
@@ -44,5 +44,5 @@ def set_blog
 end
 
 def blog_params
-  params.require(:blog).permit(:title, :content)
+  params.require(:blog).permit(:title, :rich_content, photos: [])
 end

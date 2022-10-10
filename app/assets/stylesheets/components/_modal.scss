@@ -14,7 +14,8 @@
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: $rafi-grey;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: $rafi-orange;
   border-radius: 4px;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;

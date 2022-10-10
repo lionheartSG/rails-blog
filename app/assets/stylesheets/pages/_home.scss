@@ -1,12 +1,13 @@
 // Specific CSS for your home-page
+
+
+
 body {
-  background: #ADA996;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
 }
 
 .container {
-  background-color: $rafi-grey;
+  background: linear-gradient(to right, #f12711, #f5af19);
   padding: 40px;
   margin-bottom: 40px;
   border-radius: 20px;
@@ -20,6 +21,9 @@ body {
 #about-me {
   h3 {
     color: $rafi-black;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
   }
 
   p {
@@ -29,6 +33,68 @@ body {
 
   border-radius: 15px;
   padding: 20px;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+#middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .ball {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+#doors {
+  display: flex;
+  background-color: rgba(255,255,255, 0.1);
+  width: 846px;
+  height: 1102px;
+  z-index: -1;
+  position: relative;
+  left: 420px;
+  top: -1110px;
+
+  .door-left {
+    display: none;
+    background-color: red;
+    height: 1102px;
+    width: 423px;
+    border-top-left-radius: 80%;
+    border-right-color: black;
+    border: solid;
+  }
+
+  .door-right {
+    display: none;
+    background-color: red;
+    height: 1102px;
+    width: 423px;
+    border-top-right-radius: 80%;
+    border-left-color: black;
+    border: solid;
+  }
+
+  .knob-left {
+    position: relative;
+    bottom: -530px;
+    right: -360px;
+    font-size: 32px
+  }
+
+  .knob-right {
+    position: relative;
+    bottom: -530px;
+    left: 20px;
+    font-size: 32px
+  }
+
 }
 
 #blog {
@@ -37,6 +103,7 @@ body {
   align-items: center;
   border-radius: 15px;
   padding: 20px;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
 
   h3 {
     color: $rafi-black;
@@ -50,18 +117,19 @@ body {
     height: 200px !important;
     a {
       text-decoration: none;
+      color: $rafi-orange
     }
   }
 
   .card {
     display: flex;
-    width: 200px;
+    width: 250px;
     height: 150px;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
     justify-content: center;
-    align-items: center;
+    text-align: center;
     text-decoration: none;
   }
 
